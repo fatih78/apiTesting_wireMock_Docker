@@ -1,0 +1,17 @@
+{
+  "priority": 4,
+  "request": {
+    "method": "POST",
+    "urlPathPattern": "/api/v1/houses",
+    "bodyPatterns": [
+      {
+        "contains": "\"id\""
+      },{
+        "contains": "\"title\""
+      }
+    ]
+  },
+  "response": {
+    "status": 200
+  }
+}

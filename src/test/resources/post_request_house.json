@@ -1,0 +1,12 @@
+{
+  "id": "3",
+  "title": "House 3",
+  "adress": {
+    "street": "Station Square",
+    "house number": 3,
+    "city": "Amsterdam",
+    "country code": "NL"
+  },
+  "build": true,
+  "created": "2022-04-11"
+}

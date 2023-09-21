@@ -1,0 +1,38 @@
+{
+  "request": {
+    "method": "GET",
+    "urlPathPattern": "/api/v1/houses"
+  },
+  "response": {
+    "status": 200,
+    "jsonBody": [
+      {
+        "id": "1",
+        "title": "House 1",
+        "adress": {
+          "street": "Station Square",
+          "house number": 1,
+          "city": "Amsterdam",
+          "country code": "NL"
+        },
+        "build": true,
+        "created": "2022-04-11"
+      },
+      {
+        "id": "2",
+        "title": "House 2",
+        "adress": {
+          "street": "Station Square",
+          "house number": 2,
+          "city": "Amsterdam",
+          "country code": "NL"
+        },
+        "build": true,
+        "created": "2022-04-12"
+      }
+    ],
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}
