@@ -3,7 +3,7 @@ version: '3.9'
 services:
   todo-service:
     image: wiremock/wiremock:2.32.0
-    container_name: todo-service
+    container_name: mock-service
     volumes:
       - ./mockData:/home/wiremock
     ports:
