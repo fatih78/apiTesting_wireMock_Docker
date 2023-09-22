@@ -1,5 +1,6 @@
 plugins {
     id("java")
+    id("com.avast.gradle.docker-compose") version "0.17.5"
 }
 
 group = "org.example"
@@ -17,6 +18,11 @@ dependencies {
     implementation("com.googlecode.json-simple:json-simple:1.1")
     implementation("com.fasterxml.jackson.core:jackson-databind:2.15.2")
 
+}
+
+dockerCompose {
+    useComposeFiles.add("docker-compose.yml")
+    isRequiredBy(tasks.test)
 }
 
 tasks.test {
