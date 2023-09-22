@@ -4,6 +4,10 @@ This README would normally document whatever steps are necessary to explain this
 
 ### Prerequisites ###
 * Install Docker
+* CheckOut this project
+* Set Up your environment settings
+* This is a Java project (v17)
+* I personally prefer to use intelliJ as VCS
 
 ### What is this repository for? ###
 * It's a demo how to api test against mocks using WireMock in Docker
