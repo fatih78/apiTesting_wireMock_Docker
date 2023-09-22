@@ -14,8 +14,11 @@ This README would normally document whatever steps are necessary to explain this
 * Bring down the environment with 'docker-compose down'
 * Run the tests manually from class 'API' in folder 'src/test/java'
 
-### CommandLine Run ###
-* 
+### CommandLine Run - Always good to do a clean build! ###
+* ./gradlew test
+* OR
+* ./gradlew clean build
+* This commands will spin-up the container >>> execute all tests >>> spin-down the container
 
 ### Utilities ###
 * In the mockData folder you can see the definitions of the mocked json-data (scheme) in folder mappings
