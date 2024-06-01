@@ -3,40 +3,35 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.http.converter.HttpMessageConverter;
-import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
 import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.RestTemplate;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.core.StringContains.containsString;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.fail;
 
+
 public class API {
+
     Utils utils = new Utils();
     RestTemplate restTemplate = new RestTemplate();
     String baseUrl = "http://localhost:8383/api/v1/houses";
 
     @BeforeEach
     public void convert() {
-        //      Trick below: https://stackoverflow.com/questions/21854369/no-suitable-httpmessageconverter-found-for-response-type
-        List<HttpMessageConverter<?>> messageConverters = new ArrayList<>();
-        MappingJackson2HttpMessageConverter converter = new MappingJackson2HttpMessageConverter();
-        converter.setSupportedMediaTypes(Collections.singletonList(MediaType.ALL));
-        messageConverters.add(converter);
+        utils.converter();
+        utils.logger();
     }
+
 
     @Test
     public void getHouses() {
         ResponseEntity<String> response
                 = restTemplate.getForEntity(baseUrl, String.class);
         assertEquals(response.getStatusCode(), HttpStatus.OK);
-
+        assertThat(response.toString(), containsString("Amsterdam"));
     }
 
     @Test

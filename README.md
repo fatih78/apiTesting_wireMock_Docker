@@ -18,6 +18,10 @@ This README would normally document whatever steps are necessary to explain this
 * Bring down the environment with 'docker-compose down'
 * Run the tests manually from class 'API' in folder 'src/test/java'
 
+### Assertions - the below 2 libraries/methods are used ###
+* testImplementation group: 'org.hamcrest', name: 'java-hamcrest', version: '2.0.0.0'
+* Assertions (JUnit 5.0.1 API): testImplementation("org.junit.jupiter:junit-jupiter")
+
 ### CommandLine Run - Always good to do a clean build! ###
 * ./gradlew test
 * OR
