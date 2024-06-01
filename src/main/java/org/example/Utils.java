@@ -22,7 +22,7 @@ public class Utils {
             .getClass().getName());
 
     RestTemplate restTemplate = new RestTemplate();
-    String baseUrl = "http://localhost:8383/api/v1/houses";
+    private final String baseUrl = "http://localhost:8383/api/v1/houses";
     public Object reader(String file){
         JSONParser jsonParser = new JSONParser();
 
